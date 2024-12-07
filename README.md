@@ -1,75 +1,24 @@
-# Nuxt Minimal Starter
+## Introduction
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Show appreciation for your contributors generate and embed a stylish image directly into your README.md
 
-## Setup
+## Technologies Stack
 
-Make sure to install dependencies:
+- Framework: [Nuxt](https://nuxt.com/)
+- UI Library: [Nuxt UI](https://ui.nuxt.com/)
+- Design System: [Tailwind CSS](https://tailwindcss.com/)
 
-```bash
-# npm
-npm install
+## Contributing
 
-# pnpm
-pnpm install
+A huge thank you to everyone who is helping to improve contr.dev. Thanks to you, the project can evolve!
 
-# yarn
-yarn install
+Here are some ways you can contribute:
 
-# bun
-bun install
-```
+- [Open an issue](https://github.com/hywax/contr.dev/issues/new/choose) to report a bug.
+- [Create a pull request](https://github.com/hywax/contr.dev/compare) to add a new feature or fix a bug.
 
-## Development Server
+<!-- todo -->
 
-Start the development server on `http://localhost:3000`:
+## License
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Contr.dev is open-source software licensed under the [License Version](https://github.com/hywax/contr.dev/blob/main/LICENSE).
