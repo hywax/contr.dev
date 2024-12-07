@@ -13,4 +13,3 @@ export function useOctokit() {
 
   return _octokit
 }
-
