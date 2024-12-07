@@ -4,8 +4,13 @@
       "label": "Language"
     },
     "link": {
-      "github": "Github Repository",
-      "kofi": "Ko-fi"
+      "github": "Github",
+      "kofi": "Buy me a coffee"
+    },
+    "theme": {
+      "label": "Theme",
+      "light": "Switch to Light theme",
+      "dark": "Switch to Dark theme"
     }
   },
   "errors": {

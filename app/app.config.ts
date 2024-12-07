@@ -8,6 +8,11 @@ export default defineAppConfig({
   },
   icon: {
     aliases: {
+      'dark-mode': 'lucide:moon',
+      'light-mode': 'lucide:sun',
+      'language': 'lucide:languages',
+      'setting': 'lucide:settings-2',
+      'generate': 'lucide:sparkles',
       'arrow-up-right': 'lucide:arrow-up-right',
       'flag-en': 'circle-flags:en',
       'flag-ru': 'circle-flags:ru',
@@ -15,7 +20,7 @@ export default defineAppConfig({
   },
   ui: {
     colors: {
-      primary: 'rose',
+      primary: 'violet',
       neutral: 'neutral',
     },
   },

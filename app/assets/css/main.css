@@ -4,3 +4,7 @@
 @theme {
   --font-sans: 'Geist', sans-serif;
 }
+
+:root {
+  --ui-container: var(--container-2xl);
+}

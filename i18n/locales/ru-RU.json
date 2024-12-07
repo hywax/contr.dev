@@ -4,8 +4,13 @@
       "label": "Язык"
     },
     "link": {
-      "github": "Github репозиторий",
+      "github": "Github",
       "kofi": "Ko-fi"
+    },
+    "theme": {
+      "label": "Тема",
+      "light": "Переключить на светлую тему",
+      "dark": "Переключить на темную тему"
     }
   },
   "errors": {
