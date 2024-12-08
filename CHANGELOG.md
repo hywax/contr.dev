@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/hywax/contr.dev/compare/v0.1.0...v0.2.0)
+
+### 🚀 Enhancements
+
+- App components ([5f73e16](https://github.com/hywax/contr.dev/commit/5f73e16))
+- App layout ([7b262a7](https://github.com/hywax/contr.dev/commit/7b262a7))
+- I18n for zod ([fa2e5de](https://github.com/hywax/contr.dev/commit/fa2e5de))
+- Frontend generator ([0224c3b](https://github.com/hywax/contr.dev/commit/0224c3b))
+- I18n server locale detector ([dc1176b](https://github.com/hywax/contr.dev/commit/dc1176b))
+- App radio component ([601841b](https://github.com/hywax/contr.dev/commit/601841b))
+
+### 💅 Refactors
+
+- Moved ui components ([f9d39f1](https://github.com/hywax/contr.dev/commit/f9d39f1))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+
 ## v0.1.0
 
 
