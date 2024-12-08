@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   modules: [
+    'nuxt-zod-i18n',
     '@nuxtjs/i18n',
     '@nuxt/ui',
   ],
@@ -16,6 +17,7 @@ export default defineNuxtConfig({
     vueI18n: 'vue-i18n.options.ts',
     experimental: {
       autoImportTranslationFunctions: true,
+      localeDetector: './localeDetector.ts',
     },
     detectBrowserLanguage: {
       useCookie: true,
@@ -26,6 +28,16 @@ export default defineNuxtConfig({
       { code: 'ru', language: 'ru-RU', name: 'Русский', file: 'ru-RU.json' },
     ],
   },
+  zodI18n: {
+    localeCodesMapping: {
+      'en-GB': 'en',
+      'ru-RU': 'ru',
+    },
+  },
+  components: [
+    { path: '~/components/UI', prefix: '' },
+    '~/components',
+  ],
   ui: {
     colorMode: true,
     fonts: true,
