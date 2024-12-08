@@ -1,7 +1,7 @@
 <template>
   <UDropdownMenu :items="items" :disabled="isDisabled">
     <UButton
-      :aria-label="$t('app.language.label')"
+      :aria-label="$t('ui.language.label')"
       icon="language"
       color="neutral"
       variant="ghost"

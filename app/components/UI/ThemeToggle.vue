@@ -2,7 +2,7 @@
   <ClientOnly v-if="!colorMode?.forced">
     <UButton
       :icon="isDark ? 'dark-mode' : 'light-mode'"
-      :aria-label="isDark ? $t('app.theme.light') : $t('app.theme.dark')"
+      :aria-label="isDark ? $t('ui.theme.light') : $t('ui.theme.dark')"
       variant="ghost"
       color="neutral"
       @click="isDark = !isDark"
