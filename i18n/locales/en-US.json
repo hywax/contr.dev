@@ -1,16 +1,57 @@
 {
   "app": {
-    "language": {
-      "label": "Language"
+    "meta": {
+      "title": "Contr.dev - Show appreciation for your contributors",
+      "description": "Show appreciation for your contributors generate and embed a stylish image directly into your README.md"
     },
     "link": {
       "github": "Github",
       "kofi": "Buy me a coffee"
+    }
+  },
+  "ui": {
+    "language": {
+      "label": "Language"
     },
     "theme": {
       "label": "Theme",
       "light": "Switch to Light theme",
       "dark": "Switch to Dark theme"
+    }
+  },
+  "generator": {
+    "cta": {
+      "title": "Contr.dev",
+      "description": "Show appreciation for your contributors generate and embed a stylish image directly into your README.md"
+    },
+    "form": {
+      "repository": {
+        "placeholder": "Enter a GitHub repository. E.g. hywax/contr.dev",
+        "validation": "Please, enter a valid GitHub repository. E.g. hywax/contr.dev"
+      },
+      "columns": {
+        "label": "Columns",
+        "validation": "Incorrect number of columns"
+      },
+      "size": {
+        "label": "Avatar Size",
+        "validation": "Incorrect avatar size",
+        "variants": {
+          "small": "Small",
+          "medium": "Medium",
+          "large": "Large"
+        }
+      },
+      "shape": {
+        "label": "Avatar Shape",
+        "validation": "Incorrect avatar shape",
+        "variants": {
+          "circle": "Circle",
+          "square": "Square"
+        }
+      },
+      "preferences": "Preferences",
+      "action": "Generate"
     }
   },
   "errors": {
@@ -24,10 +65,6 @@
       "400": {
         "title": "Bad request",
         "message": "Bad request. Please, check your request and try again"
-      },
-      "403": {
-        "title": "Forbidden",
-        "message": "You don't have permission to access this resource"
       },
       "404": {
         "title": "Page not found",
