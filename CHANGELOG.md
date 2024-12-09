@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.3.0
+
+[compare changes](https://github.com/hywax/contr.dev/compare/v0.2.0...v0.3.0)
+
+### 🚀 Enhancements
+
+- Add cloudflare wrangler ([#1](https://github.com/hywax/contr.dev/pull/1))
+- Seo ([#10](https://github.com/hywax/contr.dev/pull/10))
+
+### 🏡 Chore
+
+- **github:** Locale issue templates ([6517e96](https://github.com/hywax/contr.dev/commit/6517e96))
+- **github:** Change description issue template ([874c8fc](https://github.com/hywax/contr.dev/commit/874c8fc))
+- Add local iconify icons sets ([70ca2e7](https://github.com/hywax/contr.dev/commit/70ca2e7))
+- Remove default repo in generator schema ([400b003](https://github.com/hywax/contr.dev/commit/400b003))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+- Alex ([@hywax](http://github.com/hywax))
+
 ## v0.2.0
 
 [compare changes](https://github.com/hywax/contr.dev/compare/v0.1.0...v0.2.0)
