@@ -3,7 +3,7 @@ import { z } from 'zod'
 type TranslatorFunction = (key: string) => string
 
 export const generatorSchemaDefault = Object.freeze({
-  repo: 'hywax/contr.dev',
+  repo: '',
   columns: 12,
   size: 'medium',
   shape: 'circle',
