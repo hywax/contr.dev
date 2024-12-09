@@ -1,5 +1,5 @@
 name: 🌍 Locale
-description: Suggest a locale that will improve `contr.dev`
+description: Suggest a locale that will improve this project
 labels: [pending, locale]
 body:
   - type: markdown

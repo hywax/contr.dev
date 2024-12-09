@@ -1,5 +1,5 @@
 name: 🚀 Enhancement
-description: Suggest an enchantment that will improve `contr.dev`
+description: Suggest an enchantment that will improve this project
 labels: [pending, enhancement]
 body:
   - type: markdown
