@@ -1,3 +1,5 @@
+import process from 'node:process'
+
 export default defineNuxtConfig({
   modules: [
     'nuxt-zod-i18n',
@@ -9,9 +11,16 @@ export default defineNuxtConfig({
       envPrefix: 'APP_',
     },
     public: {
-      baseUrl: '',
+      /**
+       * Since in Cloudflare Pages it is not possible to transform the `CF_PAGES_URL`
+       * environment key into `APP_PUBLIC_BASE_URL`, we set it manually.
+       */
+      baseUrl: process.env.CF_PAGES_URL,
     },
     githubToken: '',
+  },
+  nitro: {
+    preset: 'cloudflare-pages',
   },
   i18n: {
     langDir: 'locales',
@@ -71,9 +80,6 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
-  nitro: {
-    preset: 'cloudflare-pages',
-  },
   compatibilityDate: '2024-11-01',
   future: { compatibilityVersion: 4 },
   devtools: { enabled: true },
