@@ -3,6 +3,7 @@ export default cachedEventHandler((event) => {
 
   const allowIndex = runtimeConfig.public.baseUrl === runtimeConfig.public.i18n.baseUrl
   const rules = [
+    `# ${runtimeConfig.public.baseUrl}, ${runtimeConfig.public.i18n.baseUrl}, ${allowIndex ? 'same' : 'different'}`,
     'User-agent: *',
     `Disallow: ${allowIndex ? '/?' : '/'}`,
   ]
