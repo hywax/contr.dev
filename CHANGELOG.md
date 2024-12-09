@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v0.4.0
+
+[compare changes](https://github.com/hywax/contr.dev/compare/v0.3.0...v0.4.0)
+
+### 🚀 Enhancements
+
+- **i18n:** Change strategy ([c384edd](https://github.com/hywax/contr.dev/commit/c384edd))
+
+### 📖 Documentation
+
+- Add website url ([9d768d8](https://github.com/hywax/contr.dev/commit/9d768d8))
+
+### 🏡 Chore
+
+- Provide env `APP_PUBLIC_I18N_BASE_URL` ([1cf7134](https://github.com/hywax/contr.dev/commit/1cf7134))
+- Filled out the robots.txt ([cbede1e](https://github.com/hywax/contr.dev/commit/cbede1e))
+- App header link target blank ([dccad3b](https://github.com/hywax/contr.dev/commit/dccad3b))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+
 ## v0.3.0
 
 [compare changes](https://github.com/hywax/contr.dev/compare/v0.2.0...v0.3.0)
