@@ -1,5 +1,3 @@
-import process from 'node:process'
-
 export default defineNuxtConfig({
   modules: [
     'nuxt-zod-i18n',
@@ -20,8 +18,6 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     defaultLocale: 'en',
     vueI18n: 'vue-i18n.options.ts',
-    // not to duplicate env variable with baseUrl (fallback on nuxt env, that duplicate NUXT_PUBLIC_I18N_BASE_URL)
-    baseUrl: process.env.APP_PUBLIC_BASE_URL,
     experimental: {
       autoImportTranslationFunctions: true,
       localeDetector: './localeDetector.ts',
