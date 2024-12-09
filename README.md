@@ -2,6 +2,8 @@
 
 Show appreciation for your contributors generate and embed a stylish image directly into your README.md
 
+Start direct now on [the website](https://contr.dev).
+
 ## Technologies Stack
 
 - Framework: [Nuxt](https://nuxt.com/)
@@ -21,4 +23,4 @@ Here are some ways you can contribute:
 
 ## License
 
-Contr.dev is open-source software licensed under the [License Version](https://github.com/hywax/contr.dev/blob/main/LICENSE).
+Contr.dev is open-source software licensed under the [MIT](https://github.com/hywax/contr.dev/blob/main/LICENSE).
