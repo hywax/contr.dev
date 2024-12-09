@@ -6,8 +6,19 @@
 </template>
 
 <script setup lang="ts">
+const runtimeConfig = useRuntimeConfig()
+
 useSeoMeta({
   title: $t('app.meta.title'),
   description: $t('app.meta.description'),
+  ogTitle: $t('app.meta.title'),
+  ogDescription: $t('app.meta.description'),
+  ogImage: {
+    url: `${runtimeConfig.public.baseUrl}/og-image.png`,
+    width: 1280,
+    height: 600,
+    type: 'image/png',
+    alt: $t('app.meta.description'),
+  },
 })
 </script>

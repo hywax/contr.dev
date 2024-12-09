@@ -19,6 +19,8 @@
 import type { GeneratorSchema } from '#shared/schemas'
 import { generatorSchemaDefault } from '#shared/schemas'
 
+const runtimeConfig = useRuntimeConfig()
+
 const state = reactive<GeneratorSchema>({
   ...generatorSchemaDefault,
 })
@@ -44,7 +46,7 @@ const { execute, status, data: image, error } = useAsyncData('image', async () =
       query.set('shape', state.shape)
     }
 
-    img.src = `${window.location.protocol}//${window.location.host}/image?${query.toString()}`
+    img.src = `${runtimeConfig.public.baseURL}/image?${query.toString()}`
     img.onload = () => resolve(img.src)
     img.onerror = reject
   })
