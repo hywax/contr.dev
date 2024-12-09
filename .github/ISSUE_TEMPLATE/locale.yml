@@ -1,0 +1,33 @@
+name: 🌍 Locale
+description: Suggest a locale that will improve `contr.dev`
+labels: [pending, locale]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this locale request!
+
+        Check if there is a locale [in the folder](https://github.com/hywax/contr.dev/tree/main/i18n/locales) before opening it.
+  - type: input
+    id: code
+    attributes:
+      label: Code
+      description: Locale code in the form of `en-US`
+      placeholder: en-US
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Locale name in the form of `English (United States)`
+      placeholder: English (United States)
+    validations:
+      required: true
+  - type: checkboxes
+    id: additional-info
+    attributes:
+      label: Additional information
+      description: Additional information that helps us decide how to proceed.
+      options:
+        - label: Would you be willing to help implement this locale?
