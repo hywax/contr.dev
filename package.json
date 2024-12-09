@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.4.0",
   "private": true,
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -18,7 +18,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@nuxt/ui": "3.0.0-alpha.9",
+    "@nuxt/ui": "3.0.0-alpha.10",
     "@nuxtjs/i18n": "^9.1.1",
     "nuxt": "^3.14.1592",
     "nuxt-zod-i18n": "^1.11.2",
