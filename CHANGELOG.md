@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.5.0
+
+[compare changes](https://github.com/hywax/contr.dev/compare/v0.4.0...v0.5.0)
+
+### 🚀 Enhancements
+
+- **cloudflare:** Mapping `CF_PAGES_URL` to `APP_PUBLIC_BASE_URL` ([#16](https://github.com/hywax/contr.dev/pull/16))
+- Generate robots.txt ([#17](https://github.com/hywax/contr.dev/pull/17))
+- Cloudflare attach KV & R2 ([#18](https://github.com/hywax/contr.dev/pull/18))
+
+### 🏡 Chore
+
+- Debug robots.txt generate ([1b2e46a](https://github.com/hywax/contr.dev/commit/1b2e46a))
+- Disabled cache robots.txt ([513c0a0](https://github.com/hywax/contr.dev/commit/513c0a0))
+- Remove robots.txt ([2a1fa64](https://github.com/hywax/contr.dev/commit/2a1fa64))
+
+### ❤️ Contributors
+
+- Alex ([@hywax](http://github.com/hywax))
+- Hywax ([@hywax](http://github.com/hywax))
+
 ## v0.4.0
 
 [compare changes](https://github.com/hywax/contr.dev/compare/v0.3.0...v0.4.0)
