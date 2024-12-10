@@ -46,7 +46,7 @@ const { execute, status, data: image, error } = useAsyncData('image', async () =
       query.set('shape', state.shape)
     }
 
-    img.src = `${runtimeConfig.public.baseURL}/image?${query.toString()}`
+    img.src = `${runtimeConfig.public.baseUrl}/image?${query.toString()}`
     img.onload = () => resolve(img.src)
     img.onerror = reject
   })
