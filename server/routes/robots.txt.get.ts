@@ -1,4 +1,4 @@
-export default cachedEventHandler((event) => {
+export default eventHandler((event) => {
   const runtimeConfig = useRuntimeConfig()
 
   const allowIndex = runtimeConfig.public.baseUrl === runtimeConfig.public.i18n.baseUrl
@@ -11,7 +11,4 @@ export default cachedEventHandler((event) => {
   setHeader(event, 'Content-Type', 'text/plain')
 
   return rules.join('\n')
-}, {
-  name: 'robots.txt',
-  maxAge: 3600, // 1 hour
 })
