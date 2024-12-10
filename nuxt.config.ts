@@ -21,6 +21,14 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: 'cloudflare-pages',
+    storage: {
+      cache: { driver: 'cloudflareKVBinding', binding: 'CACHE' },
+      blob: { driver: 'cloudflareR2Binding', binding: 'BLOB' },
+    },
+    devStorage: {
+      cache: { driver: 'fs', base: '.data/cache' },
+      blob: { driver: 'fs', base: '.data/blob' },
+    },
   },
   i18n: {
     langDir: 'locales',
