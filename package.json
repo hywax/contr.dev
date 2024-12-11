@@ -23,7 +23,7 @@
     "nuxt": "^3.14.1592",
     "nuxt-zod-i18n": "^1.11.2",
     "octokit": "^4.0.2",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
@@ -33,10 +33,10 @@
     "@iconify-json/lucide": "^1.2.18",
     "changelogen": "^0.5.7",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.10",
+    "lint-staged": "^15.2.11",
     "typescript": "^5.7.2",
     "vue-tsc": "^2.1.10",
-    "wrangler": "^3.93.0"
+    "wrangler": "^3.95.0"
   },
   "lint-staged": {
     "*.ts": "pnpm run lint"
