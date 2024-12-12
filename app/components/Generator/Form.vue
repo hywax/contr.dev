@@ -54,9 +54,9 @@
 </template>
 
 <script setup lang="ts">
-import type { GeneratorSchema } from '#shared/schemas'
+import type { GeneratorSchema } from '#shared/schema'
 import type { Form } from '#ui/types'
-import { getGeneratorSchema } from '#shared/schemas'
+import { getGeneratorSchema } from '#shared/schema'
 
 const props = defineProps<{
   loading?: boolean

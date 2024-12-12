@@ -6,7 +6,7 @@
   />
 
   <GeneratorPreview
-    :image="image"
+    :image="data?.image"
     :repository="state.repo"
     :loading="status === 'pending'"
     :state="state"
@@ -16,39 +16,17 @@
 </template>
 
 <script setup lang="ts">
-import type { GeneratorSchema } from '#shared/schemas'
-import { generatorSchemaDefault } from '#shared/schemas'
-
-const runtimeConfig = useRuntimeConfig()
+import type { GeneratorSchema } from '#shared/schema'
+import { generatorSchemaDefault } from '#shared/schema'
 
 const state = reactive<GeneratorSchema>({
   ...generatorSchemaDefault,
 })
 
-const { execute, status, data: image, error } = useAsyncData('image', async () => {
-  image.value = ''
-
-  return new Promise<string>((resolve, reject) => {
-    const img = new Image()
-    const query = new URLSearchParams()
-
-    query.set('repo', state.repo)
-
-    if (state.columns !== generatorSchemaDefault.columns) {
-      query.set('columns', state.columns.toString())
-    }
-
-    if (state.size !== generatorSchemaDefault.size) {
-      query.set('size', state.size)
-    }
-
-    if (state.shape !== generatorSchemaDefault.shape) {
-      query.set('shape', state.shape)
-    }
-
-    img.src = `${runtimeConfig.public.i18n.baseUrl}/image?${query.toString()}`
-    img.onload = () => resolve(img.src)
-    img.onerror = reject
-  })
-}, { immediate: false })
+const { execute, status, data, error } = useFetch('/api/generate', {
+  method: 'POST',
+  body: state,
+  watch: false,
+  immediate: false,
+})
 </script>

@@ -11,6 +11,5 @@ export default cachedEventHandler((event) => {
   return robots.join('\n')
 }, {
   name: 'robots.txt',
-  swr: false,
   maxAge: 3600, // 1 hour
 })

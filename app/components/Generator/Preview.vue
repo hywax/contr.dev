@@ -4,7 +4,7 @@
       color="error"
       variant="subtle"
       :title="$t('errors.title')"
-      :description="error.message || $t('errors.message')"
+      :description="$t('errors.message')"
     />
   </div>
   <div v-else>
@@ -22,15 +22,14 @@
 </template>
 
 <script setup lang="ts">
-import type { NuxtError } from '#app'
-import type { GeneratorSchema } from '#shared/schemas'
+import type { GeneratorSchema } from '#shared/schema'
 
 interface GeneratorPreviewProps {
   image?: string
   repository?: string
   loading?: boolean
   state: GeneratorSchema
-  error?: NuxtError
+  error?: Error
 }
 
 defineProps<GeneratorPreviewProps>()

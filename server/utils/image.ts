@@ -1,22 +1,8 @@
-interface GetSVGGridImageOptions {
-  columns: number
-  size: 'small' | 'medium' | 'large'
-  shape: 'circle' | 'square'
-}
+import type { GeneratorSchema } from '#shared/schema'
 
-interface Contributor {
-  login: string
-  avatar: string
-}
+type ImageOptions = Omit<GeneratorSchema, 'repo'>
 
-export function getSVGPlaceholder(text: string) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="48">
-    <rect x="0" y="0" width="100" height="48" stroke="#c0c0c0" />
-    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">${text}</text>
-  </svg>`
-}
-
-export function getSVGGridImage(contributors: Contributor[], options: GetSVGGridImageOptions) {
+function buildSVGImage(contributors: Contributor[], options: ImageOptions) {
   const oneIconSize = 48
   const originalIconSize = 256
   const gap = 44
@@ -51,49 +37,15 @@ export function getSVGGridImage(contributors: Contributor[], options: GetSVGGrid
   </svg>`
 }
 
-async function enrichContributor(contributor: Contributor): Promise<Contributor> {
-  const response = await fetch(contributor.avatar)
-  const arrayBuffer = await response.arrayBuffer()
-  const binary = String.fromCharCode(...new Uint8Array(arrayBuffer))
-
-  return {
-    login: contributor.login,
-    avatar: btoa(binary),
-  }
+export function getImageName(repo: string, options: Record<string, any>) {
+  return `${repo.replace('/', '-')}-${Object.values(options).join('-')}.svg`
 }
 
-export const getContributors = defineCachedFunction(async (repo: string) => {
-  const api = useOctokit()
-  const [owner, name] = repo.split('/')
+export async function generateImage(params: GeneratorSchema): Promise<void> {
+  const contributors = await getContributors(params.repo)
+  const svgImage = buildSVGImage(contributors, params)
 
-  if (!owner || !name) {
-    return []
-  }
-
-  try {
-    const contributors = await api.paginate('GET /repos/{owner}/{repo}/contributors', { owner, repo: name })
-    const stackPromises = []
-
-    for (const contributor of contributors) {
-      stackPromises.push(enrichContributor({
-        login: contributor.login || 'unknown',
-        avatar: contributor.avatar_url || '',
-      }))
-    }
-
-    const usersAll = await Promise.allSettled(stackPromises)
-
-    return usersAll
-      .filter((c) => c.status === 'fulfilled')
-      .map((c) => c.value)
-  } catch (e) {
-    logger.error(e)
-  }
-
-  return []
-}, {
-  name: 'getContributors',
-  swr: false,
-  getKey: (repo) => repo,
-  maxAge: 86400, // 24 hours
-})
+  const blobStorage = useStorage('blob')
+  const imageName = getImageName(params.repo, params)
+  await blobStorage.setItem(imageName, svgImage)
+}
