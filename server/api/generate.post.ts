@@ -3,15 +3,7 @@ import { generatorSchema } from '#shared/schema'
 
 export default eventHandler(async (event) => {
   const params = await readValidatedBody(event, generatorSchema.parse)
+  await generateImage(params)
 
-  try {
-    await generateImage(params)
-
-    return {
-      image: getImageUrl(params),
-    }
-  } catch (e) {
-    logger.error(e)
-    throw createError({ statusCode: 500 })
-  }
+  return { image: getImageUrl(params) }
 })

@@ -52,6 +52,11 @@
       },
       "preferences": "Preferences",
       "action": "Generate"
+    },
+    "preview": {
+      "errors": {
+        "404": "Repository not found or has no contributors"
+      }
     }
   },
   "errors": {

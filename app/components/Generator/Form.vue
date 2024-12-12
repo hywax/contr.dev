@@ -56,7 +56,8 @@
 <script setup lang="ts">
 import type { GeneratorSchema } from '#shared/schema'
 import type { Form } from '#ui/types'
-import { getGeneratorSchema } from '#shared/schema'
+import { generatorSchemaDefault } from '#shared/schema'
+import { z } from 'zod'
 
 const props = defineProps<{
   loading?: boolean
@@ -70,12 +71,25 @@ const modelValue = defineModel<GeneratorSchema>({
   required: true,
 })
 
-const generatorSchema = getGeneratorSchema($t)
-
 const form = ref<Form<GeneratorSchema> | null>(null)
 
 const { locale } = useI18n()
 watch(locale, () => form.value?.clear())
+
+const generatorSchema = z.object({
+  repo: z.string().regex(/^[\w-]+\/[\w.-]+$/, {
+    message: $t('generator.form.repository.validation'),
+  }),
+  columns: z.preprocess((c) => Number(c), z.number({
+    message: $t('generator.form.columns.validation'),
+  }).min(1).max(64)).default(generatorSchemaDefault.columns),
+  size: z.enum(['small', 'medium', 'large'], {
+    message: $t('generator.form.size.validation'),
+  }).default(generatorSchemaDefault.size),
+  shape: z.enum(['circle', 'square'], {
+    message: $t('generator.form.shape.validation'),
+  }).default(generatorSchemaDefault.shape),
+})
 
 const sizeVariants = computed(() => [
   { label: $t('generator.form.size.variants.small'), value: 'small' },

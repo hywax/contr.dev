@@ -4,7 +4,7 @@
       color="error"
       variant="subtle"
       :title="$t('errors.title')"
-      :description="$t('errors.message')"
+      :description="$te(`generator.preview.errors.${error.statusCode}`) ? $t(`generator.preview.errors.${error.statusCode}`) : $t('errors.message')"
     />
   </div>
   <div v-else>
@@ -23,13 +23,14 @@
 
 <script setup lang="ts">
 import type { GeneratorSchema } from '#shared/schema'
+import type { FetchError } from 'ofetch'
 
 interface GeneratorPreviewProps {
   image?: string
   repository?: string
   loading?: boolean
   state: GeneratorSchema
-  error?: Error
+  error?: FetchError
 }
 
 defineProps<GeneratorPreviewProps>()

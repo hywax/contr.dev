@@ -43,6 +43,11 @@ export function getImageName(repo: string, options: Record<string, any>) {
 
 export async function generateImage(params: GeneratorSchema): Promise<void> {
   const contributors = await getContributors(params.repo)
+
+  if (contributors.length === 0) {
+    throw createError({ statusCode: 404 })
+  }
+
   const svgImage = buildSVGImage(contributors, params)
 
   const blobStorage = useStorage('blob')
