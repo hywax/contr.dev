@@ -29,7 +29,7 @@
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@hywax/tools-eslint": "^1.1.0",
-    "@iconify-json/circle-flags": "^1.2.1",
+    "@iconify-json/circle-flags": "^1.2.2",
     "@iconify-json/lucide": "^1.2.18",
     "changelogen": "^0.5.7",
     "husky": "^9.1.7",
