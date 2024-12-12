@@ -1,6 +1,32 @@
 # Changelog
 
 
+## v0.6.0
+
+[compare changes](https://github.com/hywax/contr.dev/compare/v0.5.0...v0.6.0)
+
+### 🚀 Enhancements
+
+- Image generator ([#19](https://github.com/hywax/contr.dev/pull/19))
+
+### 🩹 Fixes
+
+- Broken base url key ([8b34408](https://github.com/hywax/contr.dev/commit/8b34408))
+- **docker:** Nitro preset default ([d6d901a](https://github.com/hywax/contr.dev/commit/d6d901a))
+
+### 💅 Refactors
+
+- ⚠️  Migrate cf to docker ([#21](https://github.com/hywax/contr.dev/pull/21))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Migrate cf to docker ([#21](https://github.com/hywax/contr.dev/pull/21))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+- Alex ([@hywax](http://github.com/hywax))
+
 ## v0.5.0
 
 [compare changes](https://github.com/hywax/contr.dev/compare/v0.4.0...v0.5.0)
