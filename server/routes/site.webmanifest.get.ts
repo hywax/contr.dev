@@ -23,6 +23,5 @@ export default cachedEventHandler(() => {
   }
 }, {
   name: 'site.webmanifest',
-  swr: false,
   maxAge: 3600, // 1 hour
 })

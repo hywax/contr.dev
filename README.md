@@ -9,7 +9,6 @@ Start direct now on [the website](https://contr.dev).
 - Framework: [Nuxt](https://nuxt.com/)
 - UI Library: [Nuxt UI](https://ui.nuxt.com/)
 - Design System: [Tailwind CSS](https://tailwindcss.com/)
-- Environment: [Cloudflare Workers](https://workers.cloudflare.com/)
 
 ## Contributing
 

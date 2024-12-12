@@ -1,5 +1,3 @@
-import process from 'node:process'
-
 export default defineNuxtConfig({
   modules: [
     'nuxt-zod-i18n',
@@ -11,23 +9,15 @@ export default defineNuxtConfig({
       envPrefix: 'APP_',
     },
     public: {
-      /**
-       * Since in Cloudflare Pages it is not possible to transform the `CF_PAGES_URL`
-       * environment key into `APP_PUBLIC_BASE_URL`, we set it manually.
-       */
-      baseUrl: process.env.CF_PAGES_URL,
+      allowIndexation: '',
     },
     githubToken: '',
   },
   nitro: {
     preset: 'cloudflare-pages',
     storage: {
-      cache: { driver: 'cloudflareKVBinding', binding: 'CACHE' },
-      blob: { driver: 'cloudflareR2Binding', binding: 'BLOB' },
-    },
-    devStorage: {
-      cache: { driver: 'fs', base: '.data/cache' },
-      blob: { driver: 'fs', base: '.data/blob' },
+      cache: { driver: 'fs', base: 'data/cache' },
+      blob: { driver: 'fs', base: 'data/blob' },
     },
   },
   i18n: {
