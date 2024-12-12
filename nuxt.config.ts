@@ -14,7 +14,6 @@ export default defineNuxtConfig({
     githubToken: '',
   },
   nitro: {
-    preset: 'cloudflare-pages',
     storage: {
       cache: { driver: 'fs', base: 'data/cache' },
       blob: { driver: 'fs', base: 'data/blob' },
