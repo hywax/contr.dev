@@ -37,8 +37,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(@typescript-eslint/utils@8.17.0(eslint@9.16.0(jiti@2.4.1))(typescript@5.7.2))(@vue/compiler-sfc@3.5.13)(eslint@9.16.0(jiti@2.4.1))(typescript@5.7.2)
       '@iconify-json/circle-flags':
-        specifier: ^1.2.1
-        version: 1.2.1
+        specifier: ^1.2.2
+        version: 1.2.2
       '@iconify-json/lucide':
         specifier: ^1.2.18
         version: 1.2.18
@@ -728,8 +728,8 @@ packages:
     peerDependencies:
       eslint: ^9.12.0
 
-  '@iconify-json/circle-flags@1.2.1':
-    resolution: {integrity: sha512-/gDW8eWHUcF22aR4RIAoqtyBWy2VQOS7JFk27z+gFJ4gxiSS2dRG156sU8Hy30TYf5MaN/fRQPwAJ1ksfiXQig==}
+  '@iconify-json/circle-flags@1.2.2':
+    resolution: {integrity: sha512-MhrKkHZIpecZb/xVODREpkBA4kFCXAvO56YTyaAPg6ztU7vIoOmGiGyZshbW1CQ9AYB9AijCHjKhGGeIBr7u2w==}
 
   '@iconify-json/lucide@1.2.18':
     resolution: {integrity: sha512-SFBoHBSULntem84iWxGM9NzlP6QY/dwjxC5t4c1lC7+xq31Fous8JkppoJih0/ICJ3CsbppRZeb11y3iLcwwug==}
@@ -5883,7 +5883,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@iconify-json/circle-flags@1.2.1':
+  '@iconify-json/circle-flags@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
