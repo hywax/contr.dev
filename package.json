@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.6.0",
   "private": true,
-  "packageManager": "pnpm@9.15.1",
+  "packageManager": "pnpm@9.15.2",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -22,7 +22,7 @@
     "@nuxtjs/i18n": "^9.1.1",
     "nuxt": "^3.15.0",
     "nuxt-zod-i18n": "^1.11.2",
-    "octokit": "^4.0.2",
+    "octokit": "^4.0.3",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "@iconify-json/lucide": "^1.2.20",
     "changelogen": "^0.5.7",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.11",
+    "lint-staged": "^15.3.0",
     "typescript": "^5.7.2",
     "vue-tsc": "^2.2.0"
   },
